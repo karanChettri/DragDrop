@@ -1,0 +1,13 @@
+.sideBar {
+  display: flex;
+  left: 0;
+  position: fixed;
+  height: 100%;
+  width: var(--sidebar-width);
+  background-color: #111;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-wrap: wrap;
+  
+}

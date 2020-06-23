@@ -1,0 +1,111 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  width: max-content;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: #f9f9f9;
+  border: 1px dashed #ccc;
+  text-align: center;
+  min-height: 50px;
+  height: max-content;
+  position: relative;
+  z-index: 11;
+  /* transition: 100ms all ease-in-out; */
+}
+
+.card:hover {
+  border-color: rgb(84, 157, 253);
+}
+
+.cardDragging {
+  opacity: 0;
+}
+
+.cardBody {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  text-align: center;
+}
+
+.card:before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: rgb(84, 157, 253);
+  top: -6px;
+  left: 50%;
+  border: 2px solid #fff;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.card:after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: rgb(84, 157, 253);
+  bottom: -6px;
+  left: 50%;
+  border: 2px solid #fff;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.cardSelected:before {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: rgb(84, 157, 253);
+  top: -6px;
+  left: 50%;
+  border: 2px solid #fff;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+.cardSelected:after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background: rgb(84, 157, 253);
+  bottom: -6px;
+  left: 50%;
+  border: 2px solid #fff;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+.canvas svg {
+  height: 100vh;
+}
+
+.card:hover::before,
+.card:hover::after {
+  opacity: 1;
+}
+
+.functionHolder {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  width: 50%;
+}
+
+.functionHolder img {
+  width: 14px;
+  transition: transform 0.25s;
+  will-change: transform;
+}
+
+.functionHolder img:hover {
+  box-shadow: 0 4px 32px 0 rgb(144, 252, 252);
+  transform: scale(1.11);
+}
